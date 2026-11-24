@@ -1,0 +1,185 @@
+Households-years analysed: 47,826  (years [2021, 2022, 2023, 2024]); regions: 17
+
+======================================================================
+TASK 1 / H1  Communication spending by income and urban/rural
+======================================================================
+2024 median communication spend per person per quarter: Q1 = 6,845 tg, Q5 = 14,075 tg (ratio 2.1x)
+Share of household income spent on communication (ratio of sums), by year x quintile:
+q5       1     2     3     4     5
+year                              
+2021  4.34  3.16  2.92  2.83  2.62
+2022  4.17  3.03  2.77  2.75  2.43
+2023  4.04  2.90  2.75  2.68  2.26
+2024  4.10  2.94  2.73  2.69  2.26
+Median communication spend per person per quarter, rural (0) vs urban (1):
+urban       0        1
+year                  
+2021   5838.0   7308.0
+2022   6591.0   8274.0
+2023   7761.0   9341.0
+2024   9090.0  10747.0
+Income elasticity of communication spending = 0.01 [0.00; 0.02]  (<1 => poorer households spend a LARGER share of income)
+Rural vs urban at equal income: -5.6% communication spend per person (p=0.000)
+Mann-Whitney Q1 vs Q5 (all years): p=0.00e+00
+2024 share of households paying for FIXED home internet (rural 0 / urban 1):
+urban     0     1
+q5               
+1      80.0  85.5
+2      81.6  87.6
+3      82.6  90.6
+4      86.0  91.9
+5      84.9  91.8
+
+======================================================================
+TASK 2 / H3-H4  Social transfers and debt
+======================================================================
+Debt incidence by receipt of social transfers (GR6-GR12; pensions excluded):
+ year         group    n  debt_any  debt_current  debt_highcost  arrears_any  cannot_cover  mean_debt_service_share
+ 2021     recipient 5783     0.141         0.029          0.011        0.197         0.464                    0.061
+ 2021 non-recipient 6167     0.126         0.026          0.010        0.199         0.492                    0.064
+ 2022     recipient 5790     0.192         0.032          0.021        0.132         0.233                    0.066
+ 2022 non-recipient 6149     0.161         0.026          0.017        0.140         0.242                    0.066
+ 2023     recipient 5974     0.188         0.038          0.024        0.113         0.199                    0.067
+ 2023 non-recipient 6003     0.148         0.028          0.018        0.113         0.216                    0.076
+ 2024     recipient 5856     0.177         0.028          0.025        0.114         0.186                    0.070
+ 2024 non-recipient 6104     0.162         0.026          0.021        0.107         0.189                    0.082
+Adjusted OR for debt_current: 0.99 [0.88; 1.11] p=0.846
+Adjusted OR for debt_any: 1.00 [0.95; 1.05] p=0.984
+Adjusted OR for debt_highcost_src: 0.97 [0.84; 1.12] p=0.701
+Adjusted OR for arrears_any (2022-24): 0.96 [0.89; 1.02] p=0.196
+  debt_current OR for детские пособия: 0.96 [0.83; 1.11] p=0.573
+  debt_current OR for гос. соц. пособие: 0.98 [0.87; 1.10] p=0.681
+  debt_current OR for спец. гос. пособие: 1.05 [0.88; 1.24] p=0.582
+
+H4 - debt service relative to social transfers among recipients, by pre-transfer income quintile:
+ q5_pre      n  share_servicing  median_svc_to_transfer_if_servicing  share_svc_ge_transfer  aggregate_offset
+      1 6021.0            0.451                                1.411                  0.281             0.312
+      2 5493.0            0.478                                1.655                  0.320             0.355
+      3 4832.0            0.466                                1.846                  0.326             0.365
+      4 3833.0            0.427                                1.931                  0.307             0.336
+      5 3224.0            0.411                                1.842                  0.285             0.324
+Overall: 45.1% of recipient households pay on credit/debts; for them the median annual debt service equals 168% of the transfers received; capped aggregate offset = 33.7% of all transfer money.
+
+======================================================================
+TASK 3 / H2  Regional and infrastructure differences in digital access
+======================================================================
+2024 digital barrier index (0-1) - five highest regions:
+     reg_name  barrier_idx  no_home_internet  no_mobile_signal
+      Шымкент        0.358             0.331             0.063
+Туркестанская        0.343             0.450             0.008
+          ЗКО        0.328             0.390             0.068
+   Атырауская        0.322             0.288             0.375
+   Жамбылская        0.305             0.389             0.009
+five lowest:
+     reg_name  barrier_idx  no_home_internet  no_mobile_signal
+  Актюбинская        0.155             0.088             0.010
+ Костанайская        0.153             0.227             0.066
+          СКО        0.151             0.266             0.086
+ Павлодарская        0.118             0.135             0.046
+Мангистауская        0.101             0.154             0.009
+No home internet, rural vs urban by income quintile (2022-24):
+urban      0      1
+q5                 
+1      0.301  0.241
+2      0.265  0.217
+3      0.263  0.226
+4      0.307  0.249
+5      0.308  0.256
+  adjusted OR rural vs urban, f_nohome: 1.39 [1.33; 1.45] p=0.0000
+  adjusted OR rural vs urban, f_nohome (region FE): 1.28 [1.23; 1.34] p=0.0000
+  adjusted gap rural-urban in barrier index: +0.029 (p=0.0000)
+  adjusted gap rural-urban in barrier index (region FE): +0.030 (p=0.0000)
+Reasons for no home internet (% of households without it, 2022-24; rural 0 / urban 1):
+urban           0     1
+r_provider    5.1   2.7
+r_expensive   6.3   6.6
+r_unaware     3.4   3.8
+r_mobile     88.6  88.3
+r_devices     0.3   0.6
+
+======================================================================
+TASK 4  Take-up gap (eligible-looking households without any social transfer)
+======================================================================
+Low-income households (pre-transfer income per person < 60% of the year median): 8,824 (18.5%)
+Share of low-income households receiving NO social transfer, by digital barrier level:
+barrier_lvl  низкий  средний  высокий
+year                                 
+2021          0.387    0.388    0.348
+2022          0.415    0.353    0.370
+2023          0.382    0.347    0.333
+2024          0.395    0.364    0.331
+Adjusted OR of receiving nothing, high vs low/mid barrier: 0.91 [0.81; 1.02] p=0.101
+Low-income households WITH CHILDREN and no child benefit (2022-24):
+barrier_lvl    n   gap
+     низкий 1911 0.627
+    средний 2650 0.582
+    высокий 1545 0.566
+
+======================================================================
+TASK 5 / H5  Double vulnerability (debt stress + digital exclusion)
+======================================================================
+Prevalence by year:
+ year  high_barrier  debt_stress  double  n_double
+ 2021        0.3353       0.1947  0.0640     741.0
+ 2022        0.2676       0.1853  0.0486     568.0
+ 2023        0.2078       0.1697  0.0346     402.0
+ 2024        0.2101       0.1914  0.0408     475.0
+Share in double vulnerability by income quintile (pooled):
+q5
+1    6.86
+2    4.49
+3    4.25
+4    4.07
+5    3.79
+Observed co-occurrence 4.698% vs expected if independent 4.727% (ratio 0.99)
+chi-square independence test p=0.799
+H5 'zone of digital invisibility' (bottom-2 pre-transfer quintiles + above-median dependency + barrier index >= 0.5), share of households:
+year
+2022    7.53
+2023    6.14
+2024    6.32
+Top-5 regions by 'invisibility' share:
+reg_name
+Туркестанская     29.15
+Шымкент           14.48
+Кызылординская    12.14
+Атырауская        11.38
+Жамбылская        11.19
+
+Double-vulnerable households 2022-24 used for profiling: 1445; clusters = 4
+         доход_на_чел_(log)  размер  доля_детей  доля_пожилых  село  получают_пособия  долг_к_доходу  индекс_барьера    n  доля_%      top_region  q1_q2_share  cannot_cover  no_mobile  no_home
+cluster                                                                                                                                                                                         
+0                     12.12    5.52        0.44          0.05  0.56              1.00           0.19            0.56  475   32.87   Туркестанская         0.80          0.36       0.19     0.80
+1                     12.78    1.52        0.00          0.79  0.32              0.12           0.21            0.55  225   15.57     Акмолинская         0.09          0.40       0.17     0.79
+2                     12.85    2.10        0.04          0.04  0.48              0.44           0.17            0.57  430   29.76  Карагандинская         0.13          0.33       0.20     0.80
+3                     11.99    4.31        0.46          0.07  0.43              0.03           0.29            0.55  315   21.80  Кызылординская         0.86          0.30       0.23     0.77
+
+======================================================================
+TASK 6 / H6  Channel sizing (scenario, not a causal test)
+======================================================================
+Share of households by best available channel tier (pooled 2021-24):
+tier                A: цифровой канал  B: SMS + бесплатный мобильный (zero-rating)  C: офлайн / с помощником
+Все домохозяйства                66.5                                         19.2                      14.3
+Малообеспеченные                 65.4                                         20.6                      14.0
+Село                             63.8                                         21.8                      14.4
+Долговая нагрузка                65.3                                         19.1                      15.6
+Двойная уязвимость                7.2                                         41.6                      51.1
+Among double-vulnerable households: 79.3% have mobile internet coverage at the dwelling (SMS/zero-rating reachable); 8.4% (of those without home internet) say home internet is too expensive.
+
+======================================================================
+HYPOTHESIS SCORECARD
+======================================================================
+     SUPPORTED | H1 poorest spend less on communication
+                 Q5/Q1 median spend 2.1x; income elasticity 0.01 (<1 = poor spend a larger SHARE of income)
+     SUPPORTED | H2 rural households face higher digital barrier
+                 adjusted OR no home internet, rural vs urban = 1.28 [1.23; 1.34]
+ NOT SUPPORTED | H3 transfer recipients borrow more for current needs
+                 adjusted OR = 0.99 [0.88; 1.11], p=0.846
+     SUPPORTED | H4 debt service erodes transfers
+                 45% of recipients service debt; capped offset = 33.7% of transfer money (weak test: repayment vs transfer, same year)
+ NOT SUPPORTED | H5 low income + dependency + no connectivity overlap
+                 double-vulnerable 4.7%; co-occurrence ratio vs independence 0.99; invisibility zone 6.3% (2024)
+     SUPPORTED | H6 SMS / zero-rating can reach the vulnerable
+                 79% of double-vulnerable households have mobile coverage (scenario estimate, not a causal test)
+
+CAVEAT: synthetic microdata keeps roughly half of real-world associations -> treat effect sizes as LOWER BOUNDS.

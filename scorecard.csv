@@ -1,0 +1,7 @@
+hypothesis,verdict,evidence
+H1 poorest spend less on communication,SUPPORTED,Q5/Q1 median spend 2.1x; income elasticity 0.01 (<1 = poor spend a larger SHARE of income)
+H2 rural households face higher digital barrier,SUPPORTED,"adjusted OR no home internet, rural vs urban = 1.28 [1.23; 1.34]"
+H3 transfer recipients borrow more for current needs,NOT SUPPORTED,"adjusted OR = 0.99 [0.88; 1.11], p=0.846"
+H4 debt service erodes transfers,SUPPORTED,"45% of recipients service debt; capped offset = 33.7% of transfer money (weak test: repayment vs transfer, same year)"
+H5 low income + dependency + no connectivity overlap,NOT SUPPORTED,double-vulnerable 4.7%; co-occurrence ratio vs independence 0.99; invisibility zone 6.3% (2024)
+H6 SMS / zero-rating can reach the vulnerable,SUPPORTED,"79% of double-vulnerable households have mobile coverage (scenario estimate, not a causal test)"
