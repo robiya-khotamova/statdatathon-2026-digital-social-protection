@@ -63,5 +63,3 @@ python src/02_build_core.py "path/to/synthetic_microdata_2021-2024"
 python src/03_digital_index.py "path/to/synthetic_microdata_2021-2024"
 python src/04_analysis.py work results
 ```
-
-*AI was used as a coding and debugging assistant; the hypotheses, interpretation and recommendations are the team's own, and all results are reproducible from the code.*
